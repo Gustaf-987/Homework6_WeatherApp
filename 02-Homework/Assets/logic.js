@@ -1,3 +1,5 @@
+var cities =[];
+
 $("#search-button").on("click", function(event){
   event.preventDefault();
   var city = $("#search-city").val().trim();
@@ -31,8 +33,23 @@ $("#search-button").on("click", function(event){
       var currentWindSpeed = $("#wind")
       currentWindSpeed.text(response.wind.speed)
       $("#wind").append(currentWindSpeed)
+
+      cities.push(response.name)
+      localStorage.setItem("Cities", JSON.stringify(cities));
+      updateHistory();
   
     })
+    function updateHistory() {
+      cities = JSON.parse((localStorage.getItem("Cities"))) || []
+      for (let i = 1; i < 6; i++) {
+        var result =cities[cities.length-i];
+        if (result) {
+          $("#history" + i).text(result)
+        }
+        
+      }
+    }
   
   })
 
+// updateHistory()
