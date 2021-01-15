@@ -4,13 +4,14 @@ var currentTime = moment()._d.getDate();
 $("#search-button").on("click", function(event){
   event.preventDefault();
   var city = $("#search-city").val().trim();
+
   // var savedCities = $("#cityList").val();
   // savedCities.push(city);
   // localStorage.setItem("#cityList", JSON.stringify(savedCities));
 
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="
   + city +"&appid=19eb70296734629e1adb73f7e235752b";
-  
+  // current weather stats
   $.ajax({
       url: queryURL,
       method: "GET"
@@ -37,10 +38,26 @@ $("#search-button").on("click", function(event){
 
       cities.push(response.name)
       localStorage.setItem("Cities", JSON.stringify(cities));
+     
       updateHistory();
   
     })
 
+    // UV index
+    // var lat = response.coord.lat;
+    // var lon = response.coord.lon;
+    // console.log(lat);
+    // var queryURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=19eb70296734629e1adb73f7e235752b`
+
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).then(function(response){
+    //   console.log(response);
+    // })
+
+    
+    // 5 day forcast
     var queryURL =  "http://api.openweathermap.org/data/2.5/forecast?q=" + city 
     + "&appid=19eb70296734629e1adb73f7e235752b";
     $.ajax({
@@ -130,7 +147,7 @@ $("#search-button").on("click", function(event){
 
 
 
-
+    // retrieving search results
     function updateHistory() {
       cities = JSON.parse((localStorage.getItem("Cities"))) || []
       for (let i = 1; i < 6; i++) {
@@ -138,8 +155,8 @@ $("#search-button").on("click", function(event){
         if (result) {
           $("#history" + i).text(result)
         }
-        
       }
+      // localStorage.setItem(this.id, $("#history" +this.id).val())
     }
   
   })
