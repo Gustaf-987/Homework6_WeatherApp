@@ -95,15 +95,35 @@ $("#search-button").on("click", function(event){
 
       var day3Image = $("#image-day3")
       var newLink1 = "http://openweathermap.org/img/wn/" + response.list[18].weather[0].icon + "@2x.png"
-      day2Image.attr("src", newLink1)
+      day3Image.attr("src", newLink1)
 
       var day4Image = $("#image-day4")
       var newLink1 = "http://openweathermap.org/img/wn/" + response.list[26].weather[0].icon + "@2x.png"
-      day2Image.attr("src", newLink1)
+      day4Image.attr("src", newLink1)
 
       var day5Image = $("#image-day5")
       var newLink1 = "http://openweathermap.org/img/wn/" + response.list[34].weather[0].icon + "@2x.png"
-      day2Image.attr("src", newLink1)
+      day5Image.attr("src", newLink1)
+
+      var day1Humidity = $("#humidity-day1")
+      day1Humidity.text(response.list[2].main.humidity + "%")
+      $("#humidity-day1").append(day1Humidity)
+
+      var day2Humidity = $("#humidity-day2")
+      day2Humidity.text(response.list[10].main.humidity + "%")
+      $("#humidity-day2").append(day2Humidity)
+
+      var day3Humidity = $("#humidity-day3")
+      day3Humidity.text(response.list[18].main.humidity + "%")
+      $("#humidity-day3").append(day3Humidity)
+
+      var day4Humidity = $("#humidity-day4")
+      day4Humidity.text(response.list[26].main.humidity + "%")
+      $("#humidity-day4").append(day4Humidity)
+
+      var day5Humidity = $("#humidity-day5")
+      day5Humidity.text(response.list[34].main.humidity + "%")
+      $("#humidity-day5").append(day5Humidity)
 
 
     })
