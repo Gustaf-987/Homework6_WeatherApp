@@ -23,26 +23,24 @@
                           <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
                         </div>
                     </div>                           
-            </div>   
+            </div>  
+            <div class="row">
+                <div class="city-container">
+                    <ul id="cityList"></ul>
+                </div>
+            </div> 
 
-            <div class="col-9">
-                <div class="container-fluid">
-                    <div class="card" style="width: 18rem;">
-                        <p id="headings">City Name: <span class="current" id="name"></span></p>
-
-                        <!-- <div id="name">City Name:</div> -->
-                        <div id="temp">Temperature:</div>
-                        <div id="humidity">Humidity:</div>
-                        <div id="wind">Wind Speed:</div>
-                        <div>UV Index</div>
-                        <!-- <ul class="list-group list-group-flush">
-                          <li id="name" class="list-group-item">City Name:</li>
-                          <li id="temp" class="list-group-item">Temperature:</li>
-                          <li id="humidity" class="list-group-item">Humidity:</li>
-                          <li id="wind" class="list-group-item">Wind Speed:</li>
-                          <li id="UV" class="list-group-item">UV Index:</li>
-                        </ul> -->
+            <div class="col-sm-9">
+                <div class="row ml-2 border border-dark rounded mt-3">
+                    <div class="col-sm-12" id="current-wx">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p id="headings1">City Name: <span class="current" id="name"></span></p>
+                        <p id="headings2">Temperature: <span class="current" id="temp"></span></p>
+                        <p id="headings3">Humidity: <span class="current" id="humidity"></span></p>
+                        <p id="headings4">Wind Speed: <span class="current" id="wind"></span></p>
+                        <p id="headings5">UV Index: <span class="current" id="UV"></span></p>
                     </div>
+
                 </div>
             </div>   
         </row>
