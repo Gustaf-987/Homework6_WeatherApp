@@ -7,6 +7,7 @@ In the empty field, enter a major city and watch the from populate with current 
 Search results are stored for easy recollection.
 
 # Links: 
-https://github.com/Gustaf-987/Homework6_WeatherApp/settings
+https://github.com/Gustaf-987/Homework6_WeatherApp
+https://gustaf-987.github.io/Homework6_WeatherApp/
 
-![screenshot](https://github.com/Gustaf-987/Homework6_WeatherApp/blob/main/02-Homework/Assets/Screenshot%20(64).png)
+![Screenshot](https://github.com/Gustaf-987/Homework6_WeatherApp/blob/main/Assets/Screenshot%20(64).png)
